@@ -34,7 +34,7 @@ public class ScriptsTable extends javax.swing.JFrame {
 					: SynchronizationController.appLocation);
 	private JComboBox scriptType = new JComboBox(new ScriptType[] {
 			ScriptType.CLIENT, ScriptType.SERVER, ScriptType.TECHNICAL_EVENT,
-			ScriptType.BUSINESS_EVENT });
+			ScriptType.BUSINESS_EVENT, ScriptType.TIMER_EVENT });
 	private final javax.swing.JButton getForEditButton = new JButton(
 			"Pobierz do edycji");
 	private final javax.swing.JToggleButton hotDeployinhButton = new JToggleButton(
@@ -138,6 +138,7 @@ public class ScriptsTable extends javax.swing.JFrame {
 						return scriptDataInfo.getName();
 					}
 				});
+
 		tableScrollPanel.setViewportView(getTable());
 
 		setNetbeansLayoutHacks();
