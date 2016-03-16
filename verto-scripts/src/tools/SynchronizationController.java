@@ -241,12 +241,8 @@ public class SynchronizationController {
 				appLocation, login, password);
 		scriptDataInfo.setSource(groovyScriptSource);
 		String packageName = readFromFile.split("\n")[0].trim();
-		scriptDataInfo.setParams(new ArrayList<String>());
-		// scriptDataInfo.getParams().add(
-		// fileOperator.getFileName().replace(".groovy", ""));
-		scriptDataInfo.getParams().add(fileOperator.getFileName());
-		scriptDataInfo.getParams().add(packageName);
-
+		scriptDataInfo.setForceClassName(fileOperator.getFileName());
+		scriptDataInfo.setForcePackage(packageName);
 		adapter.update(scriptDataInfo);
 	}
 
